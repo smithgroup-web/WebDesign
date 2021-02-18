@@ -1,0 +1,104 @@
+.overlay
+    position: fixed
+    width: 100%
+    min-height: 100vh
+    top: 0
+    left: 0
+    background-color: rgba(30, 6, 61, 0.8)
+    display: none
+    z-index: 10
+    padding-top: 50px
+    overflow-y: scroll
+    @media screen and ( max-width: 991px )
+        padding-top: 0
+        background-image: url(../img/bgPopup.jpg)
+        background-size: cover
+        background-repeat: no-repeat
+.popup
+    position: absolute
+    width: 90%
+    left: 50%
+    transform: translateX(-50%)
+    padding: 50px
+    margin-bottom: 50px
+    z-index: 10
+    background-image: url(../img/bgPopup.jpg)
+    background-size: cover
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media screen and ( min-width: 1199px )
+        & .contacts-form__right
+            & .contacts-form__left
+                display: none
+    @media screen and ( max-width: 1199px )
+        & .contacts-form__content
+            flex-direction: column
+        & .contacts-form__left
+            display: flex
+            flex-direction: column
+            align-items: center
+            & img
+                display: none
+            & .contacts-form__text
+                &:nth-of-type(2)
+                    display: none
+        & .contacts-form__right
+            & .contacts-form__left
+                transform: translateY(-40px)
+                margin-bottom: 0
+                @media screen and ( max-width: 767px )
+                    transform: translateY(-100px)
+                & img
+                    display: block
+                    margin: 10px auto
+            & input
+                margin-bottom: 20px
+                @media screen and ( max-width: 767px )
+                    margin-bottom: 0
+        & .contacts-form__button
+            transform: translateX(45px) translateY(-40px)
+            @media screen and ( max-width: 767px )
+                transform: none
+            & button
+                transform: translateY(35px)
+                @media screen and ( max-width: 767px )
+                    transform: translateY(-70px)
+            & img
+                width: 90px
+                height: 90px
+    @media screen and ( max-width: 991px )
+        width: 100%
+        height: 100%
+        border-radius: 0
+        margin-bottom: 0
+        background: none
+    &-form
+        display: block
+.close-popup
+    position: absolute
+    top: 15px
+    right: 15px
+    width: 23px
+    height: 23px
+    cursor: pointer
+    &:before
+        content: ''
+        background-color: #ffffff
+        position: absolute
+        height: 6px
+        width: 40px
+        top: 15px
+        left: -15px
+        transform: rotate(-45deg)
+        border-radius: 14px
+    &:after
+        content: ''
+        background-color: #ffffff
+        position: absolute
+        height: 6px
+        width: 40px
+        top: 15px
+        left: -15px
+        transform: rotate(45deg)
+        border-radius: 14px

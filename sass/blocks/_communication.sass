@@ -1,0 +1,24 @@
+.communication
+    background-image: url(../img/communication/bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    padding-top: 85px
+    padding-bottom: 55px
+    color: #ffffff
+    &__body
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding-right: 150px
+        @media screen and ( max-width: 767px )
+            padding-right: 0
+            align-items: center
+    &__title
+        &::after
+            background: linear-gradient(-90deg, rgba(242, 233, 255, 0) -0.44%, rgba(169, 105, 255, 0.661458) 48.21%, #8427FF 100%)
+    &__text
+        max-width: 600px
+        @media screen and ( max-width: 1199px )
+            max-width: 385px
+        @media screen and ( max-width: 767px )
+            text-align: center

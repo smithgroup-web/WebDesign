@@ -1,0 +1,106 @@
+.footer
+    background-color: #2B1943
+    padding-top: 100px
+    padding-bottom: 50px
+    @media screen and ( max-width: 767px )
+        padding-top: 70px
+    & a 
+        text-decoration: none
+        outline: none
+    & svg
+        margin-right: 10px
+        & path
+            fill: white
+            transition: 0.3s
+    &__top
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        @media screen and ( max-width: 767px )
+            flex-direction: column
+            align-items: center
+    &__title
+        color: #F7C7FF
+        font-size: 36px
+        line-height: 56px
+        font-family: 'Matroska'
+    &-socials
+        display: flex
+        flex-direction: column
+        align-items: center
+        @media screen and ( max-width: 767px )
+            order: 2
+        &__icons
+            margin-top: 15px
+            & a
+                @media screen and ( min-width: 1024px )
+                    &:nth-of-type(1)
+                        &:hover
+                            .footer-socials__name
+                                color: #0088cc
+                            & svg path
+                                fill: #0088cc 
+                    &:nth-of-type(2)
+                        &:hover
+                            .footer-socials__name
+                                color: #db4437
+                            & svg path
+                                fill: #db4437
+                    &:nth-of-type(3)
+                        &:hover
+                            .footer-socials__name
+                                color: #597da3
+                            & svg path
+                                fill: #597da3 
+        &__item
+            display: flex
+            align-items: center
+            margin-bottom: 30px
+        &__name
+            font-size: 15px
+            line-height: 18px
+            color: #ffffff
+            transition: 0.3s
+    &__logo
+        align-self: center
+        @media screen and ( max-width: 767px )
+            order: 1
+            margin-bottom: 30px
+    &-menu
+        display: flex
+        flex-direction: column
+        align-items: center
+        @media screen and ( max-width: 767px )
+            order: 3
+        &__item
+            margin-top: 15px
+        &__link
+            font-size: 25px
+            line-height: 30px
+            color: #ffffff
+            @media screen and ( max-width: 400px )
+                font-size: 15px
+                line-height: 18px
+            &::after
+                content: ''
+                display: block
+                width: 0
+                height: 3px
+                background-color: #fff
+                transition: 0.3s
+            &:hover
+                color: #ffffff
+                @media screen and ( min-width: 1024px )
+                    &::after
+                        width: 100%
+    &__line
+        width: 100%
+        height: 10px
+        background-color: #15032E
+        border-radius: 52px
+        margin: 50px 0
+    &__copyright
+        text-align: center
+        font-size: 18px
+        line-height: 22px
+        color: rgba(255, 255, 255, 0.52)

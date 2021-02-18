@@ -1,0 +1,112 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding-top: 30px
+    transition: 0.3s
+    z-index: 3
+    &.active
+        background-color: rgba(74, 0, 170, 0.5)
+        padding-bottom: 20px
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5)
+    & a 
+        text-decoration: none
+        outline: none
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: center
+        animation-delay: 0.2s
+    & .logo
+        @media screen and ( max-width: 1199px )
+            position: relative
+            z-index: 3
+            margin: 0 auto
+            transform: translateX(40%)
+    &__burger
+        @media ( max-width: 1199px )
+            position: relative
+            width: 30px
+            height: 20px
+            z-index: 5
+            animation-delay: 0.2s
+            &::before, &::after
+                content: ''
+                position: absolute
+                background-color: #fff
+                width: 100%
+                height: 3px
+                left: 0
+                transition: 0.3s
+            &::before
+                top: 0
+            &::after
+                bottom: 0
+            & span 
+                position: absolute
+                background-color: #fff
+                left: 0
+                width: 100%
+                height: 3px
+                top: 9px
+                transition: 0.3s
+            &.active::before
+                transform: rotate(45deg)
+                top: 9px
+            &.active::after
+                transform: rotate(-45deg)
+                bottom: 9px
+            &.active span
+                transform: scale(0)
+
+.menu
+    @media ( max-width: 1199px )
+        position: fixed
+        bottom: -100%
+        left: 0
+        width: 100%
+        height: 100%
+        padding-top: 70px
+        overflow: auto
+        transition: 0.3s
+        z-index: 2
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(171.31deg, #26094E 7.72%, #5818AF 96.91%), url(../img/menuBg.svg)
+            background-size: cover
+            opacity: 0.97
+            z-index: -1
+        &.active
+            bottom: 0
+    &__list
+        display: flex
+        align-items: center
+        @media ( max-width: 1199px )
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            height: 100%
+    &__item
+        margin-right: 150px
+        &:last-child
+            margin-right: 0
+        @media ( max-width: 1199px )
+            margin-right: 0
+            margin-bottom: 35px
+    &__link
+        color: #ffffff
+        display: inline-block
+        transition: 0.3s
+        font-size: 18px
+        @media ( max-width: 1199px )
+            font-size: 24px
+            line-height: 29px
+        &:hover
+            color: #ffffff
+            transform: translateY(-3px)
